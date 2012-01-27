@@ -17,6 +17,7 @@ html, body {
 }
 h1,
 h2,
+  
 h3,
 h4,
 h5,
@@ -33,7 +34,9 @@ code,
 del,
 dfn,
 em,
-img,
+img {
+  
+}
 q,
 s,
 samp,
@@ -59,7 +62,9 @@ table,
 caption,
 tbody,
 tfoot,
-thead,
+thead {
+  text-color:#ffffff
+}
 tr,
 th,
 td {
@@ -180,8 +185,12 @@ textarea {
  * Scaffolding
  * Basic and global styles for generating a grid system, structural layout, and page templates
  * ------------------------------------------------------------------------------------------- */
+
+
+
+
 body {
-  background-color: #ffffff;
+  background-color: #303030;
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -189,6 +198,8 @@ body {
   line-height: 18px;
   color: #404040;
 }
+
+
 .container {
   width: 940px;
   margin-left: auto;
@@ -228,14 +239,14 @@ body {
   margin-left: 240px;
 }
 a {
-  color: #0069d6;
+  color: #ffffff;
   text-decoration: none;
   line-height: inherit;
   font-weight: inherit;
 }
 a:hover {
-  color: #00438a;
-  text-decoration: underline;
+  color: #ffffff;
+  text-decoration: none;
 }
 .pull-right {
   float: right;
@@ -266,6 +277,8 @@ a:hover {
   float: left;
   margin-left: 20px;
 }
+
+
 .span1 {
   width: 40px;
 }
@@ -292,15 +305,22 @@ a:hover {
 }
 .span9 {
   width: 520px;
+  position: relative;
+        top: 100px
 }
 .span10 {
   width: 580px;
+  position: fixed
 }
 .span11 {
   width: 640px;
+  
+  top: 100px
 }
 .span12 {
-  width: 700px;
+        width: 700px;
+        position: relative;
+        top: 100px
 }
 .span13 {
   width: 760px;
@@ -400,13 +420,18 @@ p small {
   color: #bfbfbf;
 }
 h1,
-h2,
+h2 {
+  color: #ffffff;
+  font-weight: 100
+
+}
 h3,
 h4,
 h5,
 h6 {
-  font-weight: bold;
-  color: #404040;
+  font-weight: 200
+  color: #ffffff;
+  text-align: center
 }
 h1 small,
 h2 small,
@@ -427,12 +452,13 @@ h1 small {
 h2 {
   font-size: 24px;
   line-height: 36px;
+ 
 }
 h2 small {
   font-size: 14px;
 }
 h3,
-h4,
+h4
 h5,
 h6 {
   line-height: 36px;
@@ -454,11 +480,14 @@ h5 {
 }
 h6 {
   font-size: 13px;
-  color: #bfbfbf;
-  text-transform: uppercase;
-}
+  color: #ffffff;
+  text-align: center
+  }
 ul, ol {
-  margin: 0 0 18px 25px;
+  margin: 0 0 0 -40px;
+  top: -20px;
+  display: inline;
+  
 }
 ul ul,
 ul ol,
@@ -467,14 +496,15 @@ ol ul {
   margin-bottom: 0;
 }
 ul {
-  list-style: disc;
+  
 }
 ol {
   list-style: decimal;
 }
 li {
   line-height: 18px;
-  color: #808080;
+  display: inline;
+  
 }
 ul.unstyled {
   list-style: none;
@@ -665,6 +695,7 @@ input[type=file] {
 input[type=button], input[type=reset], input[type=submit] {
   width: auto;
   height: auto;
+  
 }
 select, input[type=file] {
   height: 27px;
@@ -1785,11 +1816,7 @@ a.menu:after, .dropdown-toggle:after {
   font-weight: 200;
   line-height: 27px;
 }
-footer {
-  margin-top: 17px;
-  padding-top: 17px;
-  border-top: 1px solid #eee;
-}
+
 .page-header {
   margin-bottom: 17px;
   border-bottom: 1px solid #ddd;
